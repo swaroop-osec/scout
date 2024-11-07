@@ -15,6 +15,7 @@ use rustc_span::{Span, sym};
 use rustc_span::def_id::LocalDefId;
 const LINT_MESSAGE: &str = "Used unsafe indexing in a function that returns Result";
 const LINT_HELP: &str = "Avoid using direct indexing in functions that return `Result`. Use `.get()` or handle the error case explicitly.";
+
 scout_audit_dylint_linting::declare_late_lint! {
     pub INDEX_IN_RESULT,
     Warn,
